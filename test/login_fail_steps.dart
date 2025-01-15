@@ -6,23 +6,23 @@ import 'package:mascotas/presentation/screens/home_screen.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 @StepDefinition()
-class LoginSteps {
+class LoginFailSteps {
   @Given('I am on the login page')
   Future<void> iAmOnTheLoginPage(WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
   }
 
-  @When('I enter a valid credentials')
-  Future<void> iEnterAValidCredentials(WidgetTester tester) async {
+  @When('I enter an invalid credentials')
+  Future<void> iEnterAnInvalidCredentials(WidgetTester tester) async {
     // Busca los campos de entrada por sus Keys.
     final usernameField = find.byKey(const Key('username_field'));
     final passwordField = find.byKey(const Key('password_field'));
 
     // Interactúa con los campos de texto.
     await tester.tap(usernameField);
-    await tester.enterText(usernameField, 'jmmorales');
+    await tester.enterText(usernameField, 'wronguser');
     await tester.tap(passwordField);
-    await tester.enterText(passwordField, '123456');
+    await tester.enterText(passwordField, 'wrongpassword');
   }
 
   @And('I press the login button')
@@ -37,6 +37,11 @@ class LoginSteps {
 
   @Then('I should see the home page')
   Future<void> iShouldSeeTheHomePage(WidgetTester tester) async {
-    tester.pumpWidget(const HomeScreen());
+    // Verifica que no se muestre la página de inicio.
+    expect(find.byType(HomeScreen), findsNothing);
+
+    // Verifica que se muestre un cuadro de diálogo de error.
+    final alertDialog = find.byType(AlertDialog);
+    expect(alertDialog, findsOneWidget);
   }
 }

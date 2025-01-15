@@ -1,0 +1,517 @@
+[
+  {
+    "uri": "test/features/login.feature",
+    "id": "login",
+    "keyword": "Feature",
+    "name": "Login Success",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "login;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "name": "Login with valid credentials",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter a valid credentials",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I press the login button",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the home page",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/login_fail.feature",
+    "id": "login-fail",
+    "keyword": "Feature",
+    "name": "Login Fail",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "login-fail;login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "name": "Login with invalid credentials",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter an invalid credentials",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I press the login button",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the home page",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Expected to see the home page, but it was not found.",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/register_page.feature",
+    "id": "register-page",
+    "keyword": "Feature",
+    "name": "Register Page Success",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "register-page;user-registers-successfully",
+        "keyword": "Scenario",
+        "name": "User registers successfully",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the register page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the registration form",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I submit the registration form",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the success message",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/register_page_fail.feature",
+    "id": "register-page-fail",
+    "keyword": "Feature",
+    "name": "Register Page Fail",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "register-page-fail;user-registration-failed",
+        "keyword": "Scenario",
+        "name": "User registration failed",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the register page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the registration form",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I submit the registration form",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the success message",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Expected to see the success message, but it was not found.",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/register_mascota.feature",
+    "id": "register-mascota",
+    "keyword": "Feature",
+    "name": "Register Mascota Success",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "register-mascota;create-a-new-post-with-correct-data",
+        "keyword": "Scenario",
+        "name": "Create a new post with correct data",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the register mascota page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the registration form with correct data",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I submit the registration form",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the success message",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/register_mascota_fail.feature",
+    "id": "register-mascota-fail",
+    "keyword": "Feature",
+    "name": "Register Mascota Fail",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "register-mascota-fail;create-a-new-post-with-incorrect-data",
+        "keyword": "Scenario",
+        "name": "Create a new post with incorrect data",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the register mascota page",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the registration form with incorrect data",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I submit the registration form",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see an error message",
+            "line": 6,
+            "match": {
+              "location": "steps.dart:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Expected to see an error message, but it was not found.",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },{
+    "uri": "test/features/home_screen_fail.feature",
+    "id": "home-screen-fail",
+    "keyword": "Feature",
+    "name": "Home Screen Fail",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "home-screen-fail;fail-to-refresh-images-when-waiting-for-7-seconds",
+        "keyword": "Scenario",
+        "name": "Fail to refresh images when waiting for 7 seconds",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the home screen",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I wait for seven seconds",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The images should not refresh",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "passed",
+              "error_message": "Expected images not to refresh, but they did.",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "test/features/home_screen.feature",
+    "id": "home-screen",
+    "keyword": "Feature",
+    "name": "Home Screen Success",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "home-screen;refresh-images-when-floatingactionbutton-is-pressed",
+        "keyword": "Scenario",
+        "name": "Refresh images when FloatingActionButton is pressed",
+        "description": "",
+        "line": 2,
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the home screen",
+            "line": 3,
+            "match": {
+              "location": "steps.dart:3"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I wait for seven seconds",
+            "line": 4,
+            "match": {
+              "location": "steps.dart:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The images should refresh",
+            "line": 5,
+            "match": {
+              "location": "steps.dart:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

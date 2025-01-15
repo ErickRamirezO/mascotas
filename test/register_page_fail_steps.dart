@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mascotas/main.dart';
 
 @StepDefinition()
-class RegisterPageSteps {
+class RegisterPageFailSteps {
   @Given('I am on the register page')
   Future<void> iAmOnTheRegisterPage(WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
@@ -31,6 +31,7 @@ class RegisterPageSteps {
 
   @Then('I should see the success message')
   Future<void> iShouldSeeTheSuccessMessage(WidgetTester tester) async {
-    expect(find.text('Registro en proceso...'), findsOneWidget);
+    // Introduce una condición que no se cumpla para que el test falle.
+    expect(find.text('Error en el registro'), findsOneWidget);
   }
 }
