@@ -6,10 +6,10 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'register_page_steps.dart';
+import 'register_page_fail_steps.dart';
 
 runFeatures() {
-  final steps = RegisterPageSteps();
+  final steps = RegisterPageFailSteps();
   group(
     'Register Page Success',
     () {

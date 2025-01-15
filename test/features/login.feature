@@ -1,6 +1,6 @@
-Feature: Login
-  Scenario: User tries to login with invalid credentials
+Feature: Login Success
+  Scenario: Login with valid credentials
     Given I am on the login page
-    When I enter an invalid username and password
+    When I enter a valid credentials
     And I press the login button
-    Then I should see an error dialog
+    Then I should see the home page

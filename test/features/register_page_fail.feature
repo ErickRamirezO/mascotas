@@ -1,6 +1,6 @@
-Feature: Register Page Success
+Feature: Register Page Fail
 
-  Scenario: User registers successfully
+  Scenario: User registration failed
     Given I am on the register page
     When I fill the registration form
     And I submit the registration form
