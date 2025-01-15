@@ -2,7 +2,6 @@
 import 'package:pickled_cucumber/src/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:mascotas/main.dart';
-import 'package:mascotas/presentation/screens/home_screen.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 @StepDefinition()
@@ -12,17 +11,17 @@ class LoginSteps {
     await tester.pumpWidget(const MyApp());
   }
 
-  @When('I enter a valid credentials')
-  Future<void> iEnterAValidCredentials(WidgetTester tester) async {
+  @When('I enter an invalid username and password')
+  Future<void> iEnterInvalidCredentials(WidgetTester tester) async {
     // Busca los campos de entrada por sus Keys.
     final usernameField = find.byKey(const Key('username_field'));
     final passwordField = find.byKey(const Key('password_field'));
 
     // Interactúa con los campos de texto.
     await tester.tap(usernameField);
-    await tester.enterText(usernameField, 'jmmorales');
+    await tester.enterText(usernameField, 'wronguser');
     await tester.tap(passwordField);
-    await tester.enterText(passwordField, '123456');
+    await tester.enterText(passwordField, 'wrongpassword');
   }
 
   @And('I press the login button')
@@ -35,8 +34,12 @@ class LoginSteps {
     await tester.pumpAndSettle(); // Espera a que las animaciones terminen.
   }
 
-  @Then('I should see the home page')
-  Future<void> iShouldSeeTheHomePage(WidgetTester tester) async {
-    tester.pumpWidget(const HomeScreen());
+  @Then('I should see an error dialog')
+  Future<void> iShouldSeeAnErrorDialog(WidgetTester tester) async {
+    // Busca el cuadro de diálogo de error.
+    final alertDialog = find.byType(AlertDialog);
+
+    // Verifica que el cuadro de diálogo esté presente.
+    expect(alertDialog, findsOneWidget);
   }
 }

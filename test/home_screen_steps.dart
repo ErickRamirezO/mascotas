@@ -11,10 +11,19 @@ class HomeScreenSteps {
     await tester.pumpWidget(const MyApp());
   }
 
-  @When('I wait for seven seconds')
-  Future<void> iWaitForSevenSeconds(WidgetTester tester) async {
-    // Espera el tiempo especificado.
-    await Future.delayed(Duration(seconds: 7));
+  @When('I press the refresh button {int} times')
+  Future<void> iPressTheRefreshButtonNTimes(WidgetTester tester, int times) async {
+    // Busca el botón por su Key.
+    final refreshButton = find.byKey(const Key('refresh_button'));
+
+    for (int i = 0; i < times; i++) {
+      // Interactúa con el botón.
+      await tester.tap(refreshButton);
+      await tester.pumpAndSettle(); // Espera a que las animaciones terminen.
+      
+      // Espera adicional para garantizar que la aplicación tenga tiempo de actualizar completamente.
+      await Future.delayed(Duration(seconds: 3));
+    }
   }
 
   @Then('The images should refresh')

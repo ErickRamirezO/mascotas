@@ -6,18 +6,22 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'mascotas_page_steps.dart';
+import 'home_screen_steps.dart';
 
 runFeatures() {
-  final steps = MascotasPageSteps();
+  final steps = HomeScreenSteps();
   group(
-    'MascotasPage',
+    'HomeScreen',
     () {
       testWidgets(
-        'Verify AppBar and pet list',
+        'Refresh images when FloatingActionButton is pressed',
         (WidgetTester widgetTester) async {
-          await steps.iAmOnTheMascotasPage(widgetTester);
-          await steps.iShouldSeeTheAppBarAndAtLeastOnePetItem(widgetTester);
+          await steps.iAmOnTheHomeScreen(widgetTester);
+          await steps.iPressTheRefreshButtonNTimes(
+            widgetTester,
+            3,
+          );
+          await steps.theImagesShouldRefresh(widgetTester);
         },
       );
     },

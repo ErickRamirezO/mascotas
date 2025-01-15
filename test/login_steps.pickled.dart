@@ -6,18 +6,20 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'mascotas_page_steps.dart';
+import 'login_steps.dart';
 
 runFeatures() {
-  final steps = MascotasPageSteps();
+  final steps = LoginSteps();
   group(
-    'MascotasPage',
+    'Login',
     () {
       testWidgets(
-        'Verify AppBar and pet list',
+        'User tries to login with invalid credentials',
         (WidgetTester widgetTester) async {
-          await steps.iAmOnTheMascotasPage(widgetTester);
-          await steps.iShouldSeeTheAppBarAndAtLeastOnePetItem(widgetTester);
+          await steps.iAmOnTheLoginPage(widgetTester);
+          await steps.iEnterInvalidCredentials(widgetTester);
+          await steps.iPressTheLoginButton(widgetTester);
+          await steps.iShouldSeeAnErrorDialog(widgetTester);
         },
       );
     },

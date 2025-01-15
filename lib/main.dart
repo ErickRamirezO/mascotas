@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Pasar la instancia como argumento
+      home: RegisterPage(), // Pasar la instancia como argumento
     );
   }
 }

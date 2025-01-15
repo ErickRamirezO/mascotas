@@ -9,31 +9,18 @@ import 'package:flutter_test/flutter_test.dart';
 import 'register_page_steps.dart';
 
 runFeatures() {
-  final steps = RegisterPageSteps();
+  final steps = ActionSheetSteps();
   group(
-    'Register Page Success',
+    'Mostrar ActionSheet con opciones de imagen',
     () {
       testWidgets(
-        'User registers successfully',
+        'Mostrar ActionSheet y seleccionar una opción',
         (WidgetTester widgetTester) async {
-          await steps.iAmOnTheRegisterPage(widgetTester);
-          await steps.iFillTheRegistrationForm(widgetTester);
-          await steps.iSubmitTheRegistrationForm(widgetTester);
-          await steps.iShouldSeeTheSuccessMessage(widgetTester);
-        },
-      );
-    },
-  );
-  group(
-    'Register Page Fail',
-    () {
-      testWidgets(
-        'User registration failed',
-        (WidgetTester widgetTester) async {
-          await steps.iAmOnTheRegisterPage(widgetTester);
-          await steps.iFillTheRegistrationForm(widgetTester);
-          await steps.iSubmitTheRegistrationForm(widgetTester);
-          await steps.iShouldSeeTheSuccessMessage(widgetTester);
+          await steps.iAmOnThePageWithActionSheetButton(widgetTester);
+          await steps.iTapTheShowActionSheetButton(widgetTester);
+          await steps.iShouldSeeTheAlertDialogWithOptions(widgetTester);
+          await steps.iTapTheCameraOption(widgetTester);
+          await steps.theAlertDialogShouldDisappear(widgetTester);
         },
       );
     },
